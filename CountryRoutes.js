@@ -1,6 +1,6 @@
 import { Router } from "express";
-import { getCountryByCode } from "./CountryService";
-import { asyncHandler } from "./ErrorHandler";
+import { getCountryByCode } from "./CountryService.js";
+import { asyncHandler } from "./ErrorHandler.js";
 
 const router = Router();
 

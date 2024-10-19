@@ -1,4 +1,4 @@
-import { AppError, AppErrorTypes, createAppError } from "./AppError";
+import { AppError, AppErrorTypes, createAppError } from "./AppError.js";
 
 const countries = [
     {name: "Sri Lanka", code: "LK"},
@@ -15,6 +15,6 @@ export async function getCountryByCode(code) {
     const data = countries.find(c => c.code === code)
     
     if(!data) {
-        throw createAppError(AppErrorTypes.NOT_FOUND_ERROR)
+        throw createAppError(AppErrorTypes.NOT_FOUND_ERROR.name)
     }
 }

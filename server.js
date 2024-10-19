@@ -2,8 +2,10 @@ import express from 'express'
 import { ErrorHandler } from './ErrorHandler.js'
 import { countryRouter } from './CountryRoutes.js'
 
-const app = express()
+const host = 'http://localhost'
 const port = 3000
+
+const app = express()
 
 const errorHandler = new ErrorHandler()
 
@@ -18,5 +20,5 @@ app.use(async (err, req, res, next) => {
 })
 
 app.listen(port, () => {
-  console.log(`Example app listening on port ${port}`)
+  console.log(`listening on port ${host}:${port}`)
 })
