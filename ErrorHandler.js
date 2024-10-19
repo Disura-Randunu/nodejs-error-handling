@@ -24,3 +24,7 @@ export class ErrorHandler {
 
     // define more error methods such as sendLogs, alertAdmin and use them as required in handleError function.
 }
+
+export const asyncHandler = (fn) => (req, res, next) => {
+    Promise.resolve(fn(req, res, next)).catch(next);
+};
